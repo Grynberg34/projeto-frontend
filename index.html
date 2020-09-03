@@ -14,38 +14,55 @@
 
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
-  <!-- Place favicon.ico in the root directory -->
-
+  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 
   <meta name="theme-color" content="#fafafa">
 </head>
 
 <body>
 
-  <header>
-    <h1>Título da sua página ou webapp</h1>
-    <nav>Menu de navegação principal</nav>
-  </header>
+  <!-- Aviso Mobile -->
 
-  <main>
-    <section>
-    Seu conteúdo ou feature principal vem aqui
-    </section>
-    <aside>
-      Algum conteúdo ou feature não-principal de apoio
-    </aside>
-  </main>
+  <div id="mobile">
+    <h1 id="texto-mobile">Acesse no computador</h1>
+  </div>
 
-  <footer>
-    Informações gerais, recursos secundários de apoio,
-    nome do autor.
-  </footer>
-   
+  <!-- Música -->
 
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
+  <audio id="música">
+    <source src="./img/ecstasy-of-gold.mp3" type="audio/mpeg">
+  </audio>
+
+  <button id="pausar" onclick="pausar()">Pause</button>
+  <button id="tocar" onclick="tocar()">Play</button>
+
+  <!-- Vitrola -->
+
+  <div id="vitrola">
+    <img id="vitrola-img" src="./img/vitrola.png" alt="">
+  </div>
+
+  <div id="haste">
+    <img id="haste-img" src="./img/haste.png" alt="">
+  </div>
+
+  <div id="dropzone" ondrop="drop_handler(event)" ondragover="dragover_handler(event)"></div>
+
+  <!-- Disco -->
+
+  <div id="lp" draggable="true" ondragstart="dragstart_handler(event)">
+    <img id="lp-img" src="./img/lp.png" alt="">
+  </div>
+
+  <div id="cover" onclick="mostrarLP()">
+    <img src="./img/cover.png" alt="" class="" id="cover-img">
+  </div>
+  
+
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
