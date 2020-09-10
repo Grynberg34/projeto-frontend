@@ -1,14 +1,14 @@
 // Mostrar LP
 
-function mostrarLP() {
+document.getElementById("cover").addEventListener("click", function mostrarLP(){
     document.getElementById("lp").style.opacity = 1;
     document.getElementById("lp").style.marginLeft = "244px";
     document.getElementById("lp").style.marginTop = "183px";
-}
+})
 
 // hastes
 
-function pausar() {
+document.getElementById("pausar").addEventListener("click", function pausar() {
     document.getElementById("música").pause()
     document.getElementById("lp-img").classList.remove("rotating")
     document.getElementById("haste").style.marginTop = "329px"
@@ -17,9 +17,9 @@ function pausar() {
 
     document.getElementById("pausar").style.display = "none"
     document.getElementById("tocar").style.display = "block"
-}
+})
 
-function tocar() {
+document.getElementById("tocar").addEventListener("click", function tocar() {
     document.getElementById("haste").style.marginTop = "312px"
     document.getElementById("haste").style.marginLeft = "1006px"
     document.getElementById("haste").style.transform = "rotate(18deg)"
@@ -45,34 +45,27 @@ function tocar() {
         document.getElementById("tocar").style.display = "block"
         document.getElementById("pausar").style.display = "none"
     }
-}
+})
 
 //Drag & Drop API
 
-window.addEventListener('DOMContentLoaded', () => {
-    const element = document.getElementById("lp");
-    element.addEventListener("dragstart", dragstart_handler);
-});
-
-
-
-function dragstart_handler(ev) {
+document.getElementById("lp").addEventListener("dragstart", function dragstart_handler(ev) {
     ev.dataTransfer.setData("application/my-app", ev.target.id);
     ev.dataTransfer.dropEffect = "move";
     document.getElementById("lp").style.opacity = 0
     let img = new Image(); 
     img.src = './img/lp.png'; 
     ev.dataTransfer.setDragImage(img, 100, 100);
-   }
-   function dragover_handler(ev) {
+})
+
+document.getElementById("dropzone").addEventListener("dragover", function dragover_handler(ev) {
     ev.preventDefault();
     ev.dataTransfer.dropEffect = "move"
-   }
-   function drop_handler(ev) {
+})
+
+document.getElementById("dropzone").addEventListener("drop", function drop_handler(ev) {
     ev.preventDefault();
     const data = ev.dataTransfer.getData("application/my-app");
     ev.target.appendChild(document.getElementById(data));
-
     document.getElementById("tocar").style.display = "block"
-
-}
+})

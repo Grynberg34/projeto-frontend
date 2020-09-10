@@ -37,8 +37,8 @@
     <source src="./img/ecstasy-of-gold.mp3" type="audio/mpeg">
   </audio>
 
-  <button id="pausar" onclick="pausar()">Pause</button>
-  <button id="tocar" onclick="tocar()">Play</button>
+  <button id="pausar">Pause</button>
+  <button id="tocar">Play</button>
 
   <!-- Vitrola -->
 
@@ -50,15 +50,15 @@
     <img id="haste-img" src="./img/haste.png" alt="">
   </div>
 
-  <div id="dropzone" ondrop="drop_handler(event)" ondragover="dragover_handler(event)"></div>
+  <div id="dropzone"></div>
 
   <!-- Disco -->
 
-  <div id="lp" draggable="true" ondragstart="dragstart_handler(event)">
+  <div id="lp" draggable="true">
     <img id="lp-img" src="./img/lp.png" alt="">
   </div>
 
-  <div id="cover" onclick="mostrarLP()">
+  <div id="cover">
     <img src="./img/cover.png" alt="" class="" id="cover-img">
   </div>
   
