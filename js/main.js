@@ -1,3 +1,47 @@
+// // MENU INICIAL // // 
+
+// 1. Vitrola
+document.getElementsByClassName("menu__opção")[0].addEventListener("click", function mostrarVitrola(){
+    document.getElementsByClassName("menu")[0].style.display = "none"
+    document.getElementsByClassName("vitrola")[0].style.display = "block"
+})
+
+// 2. Rádio (em breve)
+document.getElementsByClassName("menu__opção")[1].addEventListener("click", function mostrarRádio(){
+    document.getElementsByClassName("menu")[0].style.display = "none"
+    document.getElementsByClassName("embreve")[0].style.display = "block"
+})
+
+// 3. Discoteca (em breve)
+document.getElementsByClassName("menu__opção")[2].addEventListener("click", function mostrarDiscoteca(){
+    document.getElementsByClassName("menu")[0].style.display = "none"
+    document.getElementsByClassName("embreve")[0].style.display = "block"
+})
+
+
+// 4. Boombox (em breve)
+document.getElementsByClassName("menu__opção")[3].addEventListener("click", function mostrarBoombox(){
+    document.getElementsByClassName("menu")[0].style.display = "none"
+    document.getElementsByClassName("embreve")[0].style.display = "block"
+})
+
+
+
+// // EM BREVE // //
+
+
+// Voltar para o Menu Inicial
+
+document.getElementsByClassName("embreve__voltar")[0].addEventListener("click", function voltarMenuInicial(){
+    document.getElementsByClassName("menu")[0].style.display = "block"
+    document.getElementsByClassName("embreve")[0].style.display = "none"
+})
+
+
+
+// // VITROLA // //
+
+
 // Mostrar LP
 
 document.getElementsByClassName("vitrola__cover")[0].addEventListener("click", function mostrarLP(){
@@ -7,7 +51,7 @@ document.getElementsByClassName("vitrola__cover")[0].addEventListener("click", f
 })
 
 
-// hastes
+// Tocar e pausar música
 
 document.getElementsByClassName("vitrola__música--pausar")[0].addEventListener("click", function pausar() {
     document.getElementsByClassName("vitrola__música")[0].pause()
@@ -69,4 +113,26 @@ document.getElementsByClassName("vitrola__dropzone")[0].addEventListener("drop",
     const data = ev.dataTransfer.getData("application/my-app");
     ev.target.appendChild(document.getElementById(data));
     document.getElementsByClassName("vitrola__música--tocar")[0].style.display = "block"
+})
+
+// Voltar para o Menu Inicial
+
+document.getElementsByClassName("vitrola__voltar")[0].addEventListener("click", function voltarMenuInicial(){
+    document.getElementsByClassName("menu")[0].style.display = "block"
+    document.getElementsByClassName("vitrola")[0].style.display = "none"
+
+    //resetar Vitrola ao retorna à página inicial
+
+    function resetVitrola(){
+        document.getElementsByClassName("vitrola__música")[0].pause()
+        document.getElementsByClassName("vitrola__música")[0].currentTime = 0
+        document.getElementsByClassName("vitrola__lp--img")[0].classList.remove("rotating")
+        document.getElementsByClassName("vitrola__haste")[0].style.marginTop = "329px"
+        document.getElementsByClassName("vitrola__haste")[0].style.marginLeft = "1041px"
+        document.getElementsByClassName("vitrola__haste")[0].style.transform = "none"
+        document.getElementsByClassName("vitrola__música--pausar")[0].style.display = "none"
+        document.getElementsByClassName("vitrola__música--tocar")[0].style.display = "block"
+    }
+
+    resetVitrola()
 })

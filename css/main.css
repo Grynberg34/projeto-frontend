@@ -57,16 +57,70 @@ body {
   
 }
 
-.menu__opção--escondida {
+/* Em breve */
+
+.embreve {
   display: none;
 }
 
+.embreve__titulo {
+  color: ivory;
+  font-size: 50px;
+  text-align: center;
+  margin-top: 200px;
+}
+
+.embreve__voltar {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  width: 7vw;
+}
+
+.embreve__voltar--botão {
+  color: ivory;
+  border: 3px solid ivory;
+  font-size: 30px;
+  background: none;
+  cursor: pointer;
+  border-radius: 12px;
+  padding: 10px;
+  text-align: center;
+}
+
+.embreve__voltar--botão:hover {
+  color: gray;
+  border: 3px solid grey;
+
+}
+
+
 /* Vitrola */
 
+.vitrola {
+  display: none;
+}
 
 .vitrola__background {
   position: fixed;
   z-index: -9999;
+}
+
+.vitrola__voltar {
+  position: fixed;
+  font-size: 30px;
+  background: none;
+  border: 3px solid black;
+  border-radius: 12px;
+  margin-top: 50px;
+  margin-left: 550px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.vitrola__voltar:hover {
+  color: ivory;
+  border: 3px solid ivory;
 }
 
 .vitrola__aparelho {
