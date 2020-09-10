@@ -1,22 +1,26 @@
+@charset "UTF-8";
+/* //// Structure //// */
 body {
   background-color: black;
   background-attachment: fixed;
-  font-family: 'Lobster', 'cursive';
+  font-family: "Lobster", "cursive";
   overflow: hidden;
 }
-
-.mobile {
+body .mobile {
   display: none;
 }
-
-.mobile__texto {
+body .mobile__texto {
   margin-top: 100px;
   font-size: 50px;
   text-align: center;
 }
 
-/* Menu */
-
+@media only screen and (max-width: 767px) {
+  .mobile {
+    display: block;
+  }
+}
+/* //// Menu //// */
 .menu {
   margin-left: auto;
   margin-right: auto;
@@ -28,19 +32,16 @@ body {
   margin-top: 50px;
   padding-bottom: 20px;
 }
-
-.menu__linha {
+.menu .menu__linha {
   text-align: center;
 }
-
-.menu__titulo {
-
+.menu .menu__titulo {
   color: ivory;
+  font-size: 40px;
   text-align: center;
   margin-bottom: 30px;
 }
-
-.menu__opção {
+.menu .menu__opção {
   width: 30%;
   margin: 20px;
   padding: 5px;
@@ -49,35 +50,28 @@ body {
   filter: sepia();
   transition: 0.3s linear;
 }
-
-.menu__opção:hover {
- 
+.menu .menu__opção:hover {
   filter: none;
   transform: scale(1.1);
-  
 }
 
-/* Em breve */
-
+/* //// Em breve //// */
 .embreve {
   display: none;
 }
-
-.embreve__titulo {
+.embreve .embreve__titulo {
   color: ivory;
   font-size: 50px;
   text-align: center;
   margin-top: 200px;
 }
-
-.embreve__voltar {
+.embreve .embreve__voltar {
   margin-left: auto;
   margin-right: auto;
   margin-top: 50px;
   width: 7vw;
 }
-
-.embreve__voltar--botão {
+.embreve .embreve__voltar .embreve__voltar--botão {
   color: ivory;
   border: 3px solid ivory;
   font-size: 30px;
@@ -87,26 +81,23 @@ body {
   padding: 10px;
   text-align: center;
 }
-
-.embreve__voltar--botão:hover {
+.embreve .embreve__voltar .embreve__voltar--botão:hover {
   color: gray;
   border: 3px solid grey;
-
 }
 
-
-/* Vitrola */
-
+/* //// Vitrola //// */
 .vitrola {
   display: none;
+  /* Disco */
+  /* Controles */
+  /* Rotação do LP */
 }
-
-.vitrola__background {
+.vitrola .vitrola__background {
   position: fixed;
   z-index: -9999;
 }
-
-.vitrola__voltar {
+.vitrola .vitrola__voltar {
   position: fixed;
   font-size: 30px;
   background: none;
@@ -117,32 +108,27 @@ body {
   cursor: pointer;
   padding: 10px;
 }
-
-.vitrola__voltar:hover {
+.vitrola .vitrola__voltar:hover {
   color: ivory;
   border: 3px solid ivory;
 }
-
-.vitrola__aparelho {
+.vitrola .vitrola__aparelho {
   position: fixed;
   margin-top: 231px;
   margin-left: 700px;
 }
-
-.vitrola__aparelho--img {
+.vitrola .vitrola__aparelho .vitrola__aparelho--img {
   width: 500px;
   height: 398px;
 }
-
-.vitrola__dropzone {
+.vitrola .vitrola__dropzone {
   position: fixed;
   width: 396px;
   height: 396px;
   margin-top: 233px;
   margin-left: 703px;
 }
-
-.vitrola__haste {
+.vitrola .vitrola__haste {
   position: fixed;
   margin-top: 329px;
   margin-left: 1041px;
@@ -150,38 +136,29 @@ body {
   transition: 1s linear;
   -webkit-transition: 1s linear;
 }
-
-.vitrola__haste--img {
+.vitrola .vitrola__haste .vitrola__haste--img {
   width: 92px;
   height: 271px;
   z-index: 9999;
 }
-
-/* Disco */
-
-.vitrola__lp--img {
-  cursor: grab;
-}
-
-.vitrola__lp {
+.vitrola .vitrola__lp {
   position: fixed;
   margin-top: 100px;
   margin-left: 100px;
   transition: 0.3s linear;
   -webkit-transition: 0.3s linear;
 }
-
-.vitrola__cover {
+.vitrola .vitrola__lp .vitrola__lp--img {
+  cursor: grab;
+}
+.vitrola .vitrola__cover {
   position: fixed;
   margin-top: 100px;
   margin-left: 100px;
   transform: rotate(30deg);
   cursor: pointer;
 }
-
-/* Controles */
-
-.vitrola__música--pausar, .vitrola__música--tocar {
+.vitrola .vitrola__música--pausar, .vitrola .vitrola__música--tocar {
   display: none;
   position: fixed;
   margin-left: 820px;
@@ -195,48 +172,22 @@ body {
   cursor: pointer;
   transition: 1s linear;
 }
-
-button:focus {
+.vitrola button:focus {
   outline: none;
   box-shadow: none;
 }
-
-/* Rotação do LP */
-
-@-webkit-keyframes rotating{
-  from {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
-
 @keyframes rotating {
   from {
-    -moz-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
   to {
-    -moz-transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
-.rotating {
+.vitrola .rotating {
   -webkit-animation: rotating 2s linear infinite;
   -moz-animation: rotating 2s linear infinite;
   animation: rotating 2s linear infinite;
 }
 
-@media only screen and (max-width: 767px) {
-  
-  .mobile {
-    display: block;
-  }
-
-}
+/*# sourceMappingURL=main.css.map */

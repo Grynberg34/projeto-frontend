@@ -1,0 +1,131 @@
+/* //// Vitrola //// */
+
+.vitrola {
+
+  display: none;
+
+  .vitrola__background {
+    position: fixed;
+    z-index: -9999;
+  }
+  
+  .vitrola__voltar {
+    position: fixed;
+    font-size: 30px;
+    background: none;
+    border: 3px solid black;
+    border-radius: 12px;
+    margin-top: 50px;
+    margin-left: 550px;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  .vitrola__voltar:hover {
+    color: ivory;
+    border: 3px solid ivory;
+  }
+  
+  .vitrola__aparelho {
+    position: fixed;
+    margin-top: 231px;
+    margin-left: 700px;
+
+    .vitrola__aparelho--img {
+      width: 500px;
+      height: 398px;
+    }
+  }
+  
+  .vitrola__dropzone {
+    position: fixed;
+    width: 396px;
+    height: 396px;
+    margin-top: 233px;
+    margin-left: 703px;
+  }
+  
+  .vitrola__haste {
+    position: fixed;
+    margin-top: 329px;
+    margin-left: 1041px;
+    z-index: 9999;
+    transition: 1s linear;
+    -webkit-transition: 1s linear;
+
+    .vitrola__haste--img {
+      width: 92px;
+      height: 271px;
+      z-index: 9999;
+    }
+  }
+
+  
+  /* Disco */
+  
+  .vitrola__lp {
+    position: fixed;
+    margin-top: 100px;
+    margin-left: 100px;
+    transition: 0.3s linear;
+    -webkit-transition: 0.3s linear;
+
+
+    .vitrola__lp--img {
+      cursor: grab;
+    }
+
+  }
+  
+  .vitrola__cover {
+    position: fixed;
+    margin-top: 100px;
+    margin-left: 100px;
+    transform: rotate(30deg);
+    cursor: pointer;
+  }
+  
+  /* Controles */
+  
+  .vitrola__música--pausar, .vitrola__música--tocar {
+    display: none;
+    position: fixed;
+    margin-left: 820px;
+    margin-top: 100px;
+    background: none;
+    border: 6px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    width: 170px;
+    font-size: 60px;
+    cursor: pointer;
+    transition: 1s linear;
+  }
+  
+  button:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  
+  /* Rotação do LP */  
+
+  @mixin transform($property) {
+    -webkit-transform: $property;
+    -ms-transform: $property;
+    transform: $property;
+  }
+  
+  @keyframes rotating {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .rotating {
+    -webkit-animation: rotating 2s linear infinite;
+    -moz-animation: rotating 2s linear infinite;
+    animation: rotating 2s linear infinite;
+  }
+}

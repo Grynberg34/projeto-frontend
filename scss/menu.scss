@@ -1,0 +1,40 @@
+/* //// Menu //// */
+
+.menu {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    border: 4px solid ivory;
+    border-radius: 10px;
+    width: 40vw;
+    height: 80vh;
+    margin-top: 50px;
+    padding-bottom: 20px;
+  
+  .menu__linha {
+    text-align: center;
+  }
+  
+  .menu__titulo {
+  
+    color: ivory;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .menu__opção {
+    width: 30%;
+    margin: 20px;
+    padding: 5px;
+    text-align: center;
+    cursor: pointer;
+    filter: sepia();
+    transition: 0.3s linear;
+  }
+  
+  .menu__opção:hover {
+      filter: none;
+      transform: scale(1.1);
+    }
+}

@@ -1,0 +1,26 @@
+/* //// Structure //// */
+
+body {
+    background-color: black;
+    background-attachment: fixed;
+    font-family: 'Lobster', 'cursive';
+    overflow: hidden;
+  
+   .mobile {
+        display: none;
+    }
+
+    .mobile__texto {
+        margin-top: 100px;
+        font-size: 50px;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+  
+    .mobile {
+      display: block;
+    }
+  
+}

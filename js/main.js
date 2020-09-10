@@ -121,7 +121,7 @@ document.getElementsByClassName("vitrola__voltar")[0].addEventListener("click", 
     document.getElementsByClassName("menu")[0].style.display = "block"
     document.getElementsByClassName("vitrola")[0].style.display = "none"
 
-    //resetar Vitrola ao retorna à página inicial
+    //resetar Vitrola ao retornar à página inicial
 
     function resetVitrola(){
         document.getElementsByClassName("vitrola__música")[0].pause()
