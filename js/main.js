@@ -73,14 +73,14 @@ document.getElementsByClassName("vitrola__música--tocar")[0].addEventListener("
 
 
     document.getElementsByClassName("vitrola__música--tocar")[0].style.display = "none"
-    document.getElementsByClassName("vitrola__música--pausar")[0].style.display = "block"
 
     // Essas duas linhas são para evitar um problema no Safari, que só toca o áudio da segunda vez que é dado o comando de play
     document.getElementsByClassName("vitrola__música")[0].play()
     document.getElementsByClassName("vitrola__música")[0].pause()    
 
     setTimeout(function playing(){ 
-    document.getElementsByClassName("vitrola__música")[0].play() }, 1000);
+    document.getElementsByClassName("vitrola__música")[0].play();
+    document.getElementsByClassName("vitrola__música--pausar")[0].style.display = "block" }, 1000);
 
     document.getElementsByClassName("vitrola__música")[0].onended = function() {
         document.getElementsByClassName("vitrola__lp--img")[0].classList.remove("rotating")
@@ -131,7 +131,11 @@ document.getElementsByClassName("vitrola__voltar")[0].addEventListener("click", 
         document.getElementsByClassName("vitrola__haste")[0].style.marginLeft = "1041px"
         document.getElementsByClassName("vitrola__haste")[0].style.transform = "none"
         document.getElementsByClassName("vitrola__música--pausar")[0].style.display = "none"
-        document.getElementsByClassName("vitrola__música--tocar")[0].style.display = "block"
+
+        if (document.getElementsByClassName("dropzone")[0].hasChildNodes()){
+            document.getElementsByClassName("vitrola__música--tocar")[0].style.display = "block"
+        }
+
     }
 
     resetVitrola()
