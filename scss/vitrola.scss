@@ -102,11 +102,6 @@
     transition: 1s linear;
   }
   
-  button:focus {
-    outline: none;
-    box-shadow: none;
-  }
-  
   /* Rotação do LP */  
 
   @mixin transform($property) {
@@ -127,5 +122,64 @@
     -webkit-animation: rotating 2s linear infinite;
     -moz-animation: rotating 2s linear infinite;
     animation: rotating 2s linear infinite;
+  }
+}
+
+/* Media Queries */  
+
+@media only screen and (min-width: 1600px) and (max-width: 1700px) {
+  .vitrola {
+    margin-left: 150px;
+    margin-top: 75px;
+
+    .vitrola__background {
+    margin-left: -150px;
+    margin-top: -75px;
+    }
+
+  }
+
+}
+
+@media only screen and (min-width: 1600px) and (max-width: 1700px) {
+  .vitrola {
+    margin-left: 150px;
+    margin-top: 75px;
+
+    .vitrola__background {
+    margin-left: -150px;
+    margin-top: -75px;
+    }
+
+  }
+
+}
+
+
+@media only screen and (min-width: 1600px) and (max-width: 1700px) {
+  .vitrola {
+    margin-left: 150px;
+    margin-top: 75px;
+
+    .vitrola__background {
+      margin-left: -150px;
+      margin-top: -75px;
+    }
+
+  }
+
+}
+
+@media only screen and (min-width: 1701px) {
+   
+  .vitrola {
+    margin-left: 300px;
+    margin-top: 150px;
+
+    .vitrola__background {
+      margin-left: -300px;
+      margin-top: -150px;
+    }
+
   }
 }

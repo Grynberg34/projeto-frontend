@@ -6,13 +6,19 @@ body {
   font-family: "Lobster", "cursive";
   overflow: hidden;
 }
-body .mobile {
+body button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.mobile {
   display: none;
 }
-body .mobile__texto {
-  margin-top: 100px;
-  font-size: 50px;
+.mobile .mobile__texto {
+  margin-top: 300px;
+  font-size: 40px;
   text-align: center;
+  color: ivory;
 }
 
 @media only screen and (max-width: 767px) {
@@ -40,6 +46,8 @@ body .mobile__texto {
   font-size: 40px;
   text-align: center;
   margin-bottom: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .menu .menu__opção {
   width: 30%;
@@ -55,6 +63,30 @@ body .mobile__texto {
   transform: scale(1.1);
 }
 
+@media only screen and (max-width: 767px) {
+  .menu {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1600px) and (max-width: 1700px) {
+  .menu {
+    margin-top: 75px;
+  }
+  .menu .menu__titulo {
+    color: ivory;
+    margin-top: 100px;
+  }
+}
+@media only screen and (min-width: 1701px) {
+  .menu {
+    margin-top: 100px;
+  }
+  .menu .menu__titulo {
+    color: ivory;
+    margin-top: 100px;
+    margin-bottom: 50px;
+  }
+}
 /* //// Em breve //// */
 .embreve {
   display: none;
@@ -86,6 +118,21 @@ body .mobile__texto {
   border: 3px solid grey;
 }
 
+@media only screen and (max-width: 767px) {
+  .mobile {
+    display: block;
+  }
+}
+@media only screen and (min-width: 1600px) and (max-width: 1700px) {
+  .embreve .embreve__titulo {
+    margin-top: 400px;
+  }
+}
+@media only screen and (min-width: 1701px) {
+  .embreve .embreve__titulo {
+    margin-top: 500px;
+  }
+}
 /* //// Vitrola //// */
 .vitrola {
   display: none;
@@ -172,10 +219,6 @@ body .mobile__texto {
   cursor: pointer;
   transition: 1s linear;
 }
-.vitrola button:focus {
-  outline: none;
-  box-shadow: none;
-}
 @keyframes rotating {
   from {
     transform: rotate(0deg);
@@ -188,6 +231,48 @@ body .mobile__texto {
   -webkit-animation: rotating 2s linear infinite;
   -moz-animation: rotating 2s linear infinite;
   animation: rotating 2s linear infinite;
+}
+
+/* Media Queries */
+@media only screen and (min-width: 1600px) and (max-width: 1700px) {
+  .vitrola {
+    margin-left: 150px;
+    margin-top: 75px;
+  }
+  .vitrola .vitrola__background {
+    margin-left: -150px;
+    margin-top: -75px;
+  }
+}
+@media only screen and (min-width: 1600px) and (max-width: 1700px) {
+  .vitrola {
+    margin-left: 150px;
+    margin-top: 75px;
+  }
+  .vitrola .vitrola__background {
+    margin-left: -150px;
+    margin-top: -75px;
+  }
+}
+@media only screen and (min-width: 1600px) and (max-width: 1700px) {
+  .vitrola {
+    margin-left: 150px;
+    margin-top: 75px;
+  }
+  .vitrola .vitrola__background {
+    margin-left: -150px;
+    margin-top: -75px;
+  }
+}
+@media only screen and (min-width: 1701px) {
+  .vitrola {
+    margin-left: 300px;
+    margin-top: 150px;
+  }
+  .vitrola .vitrola__background {
+    margin-left: -300px;
+    margin-top: -150px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

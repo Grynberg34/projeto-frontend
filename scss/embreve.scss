@@ -36,4 +36,33 @@
     }   
 
 }
+
+@media only screen and (max-width: 767px) {
   
+    .mobile {
+      display: block;
+    }
+  
+}
+  
+@media only screen and (min-width: 1600px) and (max-width: 1700px) {
+
+    .embreve {
+    
+        .embreve__titulo {
+            margin-top: 400px;
+        }
+    }
+  
+}
+
+@media only screen and (min-width: 1701px) {
+   
+    .embreve {
+    
+        .embreve__titulo {
+            margin-top: 500px;
+        }
+    }
+  
+}
