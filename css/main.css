@@ -244,26 +244,6 @@ body button:focus {
     margin-top: -75px;
   }
 }
-@media only screen and (min-width: 1600px) and (max-width: 1700px) {
-  .vitrola {
-    margin-left: 150px;
-    margin-top: 75px;
-  }
-  .vitrola .vitrola__background {
-    margin-left: -150px;
-    margin-top: -75px;
-  }
-}
-@media only screen and (min-width: 1600px) and (max-width: 1700px) {
-  .vitrola {
-    margin-left: 150px;
-    margin-top: 75px;
-  }
-  .vitrola .vitrola__background {
-    margin-left: -150px;
-    margin-top: -75px;
-  }
-}
 @media only screen and (min-width: 1701px) {
   .vitrola {
     margin-left: 300px;
@@ -272,6 +252,61 @@ body button:focus {
   .vitrola .vitrola__background {
     margin-left: -300px;
     margin-top: -150px;
+  }
+}
+.rádio {
+  display: none;
+}
+.rádio .rádio__carro {
+  position: fixed;
+  margin-top: 100px;
+  width: 1450px;
+}
+.rádio .rádio__vídeo {
+  position: fixed;
+  z-index: -1;
+  bottom: 100px;
+  width: 1450px;
+}
+.rádio .rádio__controle--anterior {
+  position: fixed;
+  margin-left: 1000px;
+  margin-top: 512px;
+  cursor: pointer;
+}
+.rádio .rádio__controle--próxima {
+  position: fixed;
+  margin-left: 1260px;
+  margin-top: 524px;
+  cursor: pointer;
+}
+.rádio .rádio__voltar {
+  position: fixed;
+  margin-top: 350px;
+  margin-left: 360px;
+}
+.rádio .rádio__voltar .rádio__voltar--botão {
+  color: ivory;
+  border: none;
+  font-size: 30px;
+  background: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 767px) {
+  .rádio {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1600px) and (max-width: 1700px) {
+  .rádio {
+    transform-origin: top left;
+    transform: scale(1.1);
+  }
+}
+@media only screen and (min-width: 1701px) {
+  .rádio {
+    transform: scale(1.4);
   }
 }
 

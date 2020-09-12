@@ -1,28 +1,41 @@
 // // MENU INICIAL // // 
 
+
 // 1. Vitrola
 document.getElementsByClassName("menu__opção")[0].addEventListener("click", function mostrarVitrola(){
-    document.getElementsByClassName("menu")[0].style.display = "none"
-    document.getElementsByClassName("vitrola")[0].style.display = "block"
+    document.getElementsByClassName("menu")[0].style.display = "none";
+    document.getElementsByClassName("vitrola")[0].style.display = "block";
 })
 
-// 2. Rádio (em breve)
+// 2. Rádio
 document.getElementsByClassName("menu__opção")[1].addEventListener("click", function mostrarRádio(){
-    document.getElementsByClassName("menu")[0].style.display = "none"
-    document.getElementsByClassName("embreve")[0].style.display = "block"
+    document.getElementsByClassName("menu")[0].style.display = "none";
+    document.getElementsByClassName("rádio")[0].style.display = "block";
+
+    var música = document.getElementsByClassName("rádio__música")
+
+    for (var i = 0; i < música.length; i++) {
+        música[i].play();
+        if (música[i].classList.contains("tocando")) {
+            música[i].volume = 1
+        }
+        else
+        música[i].volume = 0
+    }
+
 })
 
 // 3. Discoteca (em breve)
 document.getElementsByClassName("menu__opção")[2].addEventListener("click", function mostrarDiscoteca(){
-    document.getElementsByClassName("menu")[0].style.display = "none"
-    document.getElementsByClassName("embreve")[0].style.display = "block"
+    document.getElementsByClassName("menu")[0].style.display = "none";
+    document.getElementsByClassName("embreve")[0].style.display = "block";
 })
 
 
 // 4. Boombox (em breve)
 document.getElementsByClassName("menu__opção")[3].addEventListener("click", function mostrarBoombox(){
-    document.getElementsByClassName("menu")[0].style.display = "none"
-    document.getElementsByClassName("embreve")[0].style.display = "block"
+    document.getElementsByClassName("menu")[0].style.display = "none";
+    document.getElementsByClassName("embreve")[0].style.display = "block";
 })
 
 
@@ -139,4 +152,101 @@ document.getElementsByClassName("vitrola__voltar")[0].addEventListener("click", 
     }
 
     resetVitrola()
+})
+
+
+//// RÁDIO ////
+
+// Tocar próxima música //
+
+document.getElementsByClassName("rádio__controle--próxima")[0].addEventListener("click", function tocarpróxima(){
+    
+    var música = document.getElementsByClassName("rádio__música");
+
+    for (var i = 0; i < música.length; i++) {
+        if (música[i].classList.contains("tocando")) {
+            var número = i
+        }
+    }
+
+    if (número == 0) {
+        música[0].classList.remove("tocando")
+        música[1].classList.add("tocando")
+    }
+
+    if (número == 1) {
+        música[1].classList.remove("tocando")
+        música[2].classList.add("tocando")
+    }
+
+    if (número == 2) {
+        música[2].classList.remove("tocando")
+        música[0].classList.add("tocando")
+    }
+
+
+    for (var i = 0; i < música.length; i++) {
+
+        if (música[i].classList.contains("tocando")) {
+            música[i].volume = 1
+        }
+        else
+        música[i].volume = 0
+    }
+
+})
+
+// Tocar música anterior //
+
+
+document.getElementsByClassName("rádio__controle--anterior")[0].addEventListener("click", function tocaranterior(){
+
+    var música = document.getElementsByClassName("rádio__música");
+
+    for (var i = 0; i < música.length; i++) {
+        if (música[i].classList.contains("tocando")) {
+            var número = i;
+        }
+    }
+
+    if (número == 0) {
+        música[0].classList.remove("tocando")
+        música[2].classList.add("tocando")
+    }
+
+    if (número == 1) {
+        música[1].classList.remove("tocando")
+        música[0].classList.add("tocando")
+    }
+
+    if (número == 2) {
+        música[2].classList.remove("tocando")
+        música[1].classList.add("tocando")
+    }
+
+
+    for (var i = 0; i < música.length; i++) {
+
+        if (música[i].classList.contains("tocando")) {
+            música[i].volume = 1
+        }
+        else
+        música[i].volume = 0
+    }
+
+})
+
+// Retornar para o menu inicial //
+
+document.getElementsByClassName("rádio__voltar")[0].addEventListener("click", function voltarMenuInicial(){
+    document.getElementsByClassName("menu")[0].style.display = "block"
+    document.getElementsByClassName("rádio")[0].style.display = "none"
+
+    var músicas = document.getElementsByClassName("rádio__música")
+
+    for (var i=0; músicas.length; i++) {
+        document.getElementsByClassName("rádio__música")[i].pause()
+        document.getElementsByClassName("rádio__música")[0].currentTime = 0
+    }
+    
 })
