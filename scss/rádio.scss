@@ -54,13 +54,24 @@
   
 }
 
+@media only screen and (min-width: 1400px) and (max-width: 1599px) {
+    .rádio {
+        transform: scale(1.2);
+        margin-left: 150px;
+
+        .rádio__vídeo {
+            bottom: -300px;
+        }
+    }
+}
+
 @media only screen and (min-width: 1600px) and (max-width: 1700px) {
     .rádio {
         transform: scale(1.2);
         margin-left: 150px;
 
         .rádio__vídeo {
-            bottom: -500px;
+            bottom: -600px;
         }
     }
 }  
@@ -72,7 +83,7 @@
       transform: scale(1.4);
 
       .rádio__vídeo {
-        bottom: -500px;
+        bottom: -600px;
     }
 
     }

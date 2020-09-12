@@ -145,7 +145,7 @@ document.getElementsByClassName("vitrola__voltar")[0].addEventListener("click", 
         document.getElementsByClassName("vitrola__haste")[0].style.transform = "none"
         document.getElementsByClassName("vitrola__música--pausar")[0].style.display = "none"
 
-        if (document.getElementsByClassName("dropzone")[0].hasChildNodes()){
+        if (document.getElementsByClassName("vitrola__dropzone")[0].hasChildNodes()){
             document.getElementsByClassName("vitrola__música--tocar")[0].style.display = "block"
         }
 
