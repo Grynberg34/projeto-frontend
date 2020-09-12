@@ -56,15 +56,25 @@
 
 @media only screen and (min-width: 1600px) and (max-width: 1700px) {
     .rádio {
-        transform-origin: top left;
-        transform: scale(1.1);
+        transform: scale(1.2);
+        margin-left: 150px;
+
+        .rádio__vídeo {
+            bottom: -500px;
+        }
     }
 }  
 
 @media only screen and (min-width: 1701px) {
      
     .rádio {
+      margin-left: 250px;
       transform: scale(1.4);
+
+      .rádio__vídeo {
+        bottom: -500px;
+    }
+
     }
 }
 
