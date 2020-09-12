@@ -243,10 +243,14 @@ document.getElementsByClassName("rádio__voltar")[0].addEventListener("click", f
     document.getElementsByClassName("rádio")[0].style.display = "none"
 
     var músicas = document.getElementsByClassName("rádio__música")
+    var músicaTocando = document.getElementsByClassName("rádio__músicas--tocando")
 
     for (var i=0; músicas.length; i++) {
-        document.getElementsByClassName("rádio__música")[i].pause()
-        document.getElementsByClassName("rádio__música")[0].currentTime = 0
+        músicas[i].pause();
+        músicas[i].currentTime = 0;
     }
+
+    músicaTocando.pause();
+    músicaTocando.currentTime = 0;
     
 })
