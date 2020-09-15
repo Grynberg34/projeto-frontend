@@ -12,21 +12,3 @@ body {
     }
 }
 
-.mobile {
-    display: none;
-
-    .mobile__texto {
-        margin-top: 300px;
-        font-size: 40px;
-        text-align: center;
-        color: ivory;
-    }
-}
-
-@media only screen and (max-width: 767px) {
-  
-    .mobile {
-      display: block;
-    }
-  
-}

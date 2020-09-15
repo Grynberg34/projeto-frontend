@@ -54,7 +54,6 @@ document.getElementsByClassName("embreve__voltar")[0].addEventListener("click", 
 
 // // VITROLA // //
 
-
 // Mostrar LP
 
 document.getElementsByClassName("vitrola__cover")[0].addEventListener("click", function mostrarLP(){
@@ -153,6 +152,77 @@ document.getElementsByClassName("vitrola__voltar")[0].addEventListener("click", 
 
     resetVitrola()
 })
+
+
+// Versão Mobile
+
+function vitrolaMobile() {
+    if (window.innerWidth < 768) {
+
+        document.getElementsByClassName("vitrola__música--tocar")[0].style.display = "block"
+
+        document.getElementsByClassName("vitrola__música--pausar")[0].addEventListener("click", function pausarMobile() {
+            document.getElementsByClassName("vitrola__música")[0].pause()
+            document.getElementsByClassName("vitrola__lp--img")[0].classList.remove("rotating")
+            document.getElementsByClassName("vitrola__haste")[0].style.marginTop = "279px"
+            document.getElementsByClassName("vitrola__haste")[0].style.marginLeft = "251px"
+            document.getElementsByClassName("vitrola__haste")[0].style.transform = "none"
+        
+            document.getElementsByClassName("vitrola__música--pausar")[0].style.display = "none"
+            document.getElementsByClassName("vitrola__música--tocar")[0].style.display = "block"
+        })
+        
+        document.getElementsByClassName("vitrola__música--tocar")[0].addEventListener("click", function tocarMobile() {
+            document.getElementsByClassName("vitrola__haste")[0].style.marginTop = "270.5px"
+            document.getElementsByClassName("vitrola__haste")[0].style.marginLeft = "233.5px"
+            document.getElementsByClassName("vitrola__haste")[0].style.transform = "rotate(18deg)"
+        
+            document.getElementsByClassName("vitrola__lp--img")[0].classList.add("rotating")
+        
+        
+            document.getElementsByClassName("vitrola__música--tocar")[0].style.display = "none"
+        
+            // Essas duas linhas são para evitar um problema no Safari, que só toca o áudio da segunda vez que é dado o comando de play
+            document.getElementsByClassName("vitrola__música")[0].play()
+            document.getElementsByClassName("vitrola__música")[0].pause()    
+        
+            setTimeout(function playing(){ 
+            document.getElementsByClassName("vitrola__música")[0].play();
+            document.getElementsByClassName("vitrola__música--pausar")[0].style.display = "block" }, 1000);
+        
+            document.getElementsByClassName("vitrola__música")[0].onended = function() {
+                document.getElementsByClassName("vitrola__lp--img")[0].classList.remove("rotating")
+                document.getElementsByClassName("vitrola__haste")[0].style.marginTop = "279px"
+                document.getElementsByClassName("vitrola__haste")[0].style.marginLeft = "251px"
+                document.getElementsByClassName("vitrola__haste")[0].style.transform = "none"
+                document.getElementsByClassName("vitrola__música--tocar")[0].style.display = "block"
+                document.getElementsByClassName("vitrola__música--pausar")[0].style.display = "none"
+            }
+        })
+    }
+
+    document.getElementsByClassName("vitrola__voltar")[0].addEventListener("click", function voltarMenuInicialMobile(){
+        document.getElementsByClassName("menu")[0].style.display = "block"
+        document.getElementsByClassName("vitrola")[0].style.display = "none"
+    
+        //resetar Vitrola ao retornar à página inicial
+    
+        function resetVitrolaMobile(){
+            document.getElementsByClassName("vitrola__música")[0].pause()
+            document.getElementsByClassName("vitrola__música")[0].currentTime = 0
+            document.getElementsByClassName("vitrola__lp--img")[0].classList.remove("rotating")
+            document.getElementsByClassName("vitrola__haste")[0].style.marginTop = "279px"
+            document.getElementsByClassName("vitrola__haste")[0].style.marginLeft = "251px"
+            document.getElementsByClassName("vitrola__haste")[0].style.transform = "none"
+            document.getElementsByClassName("vitrola__música--pausar")[0].style.display = "none"
+        }
+    
+        resetVitrolaMobile()
+    })
+    
+}
+
+vitrolaMobile()
 
 
 //// RÁDIO ////

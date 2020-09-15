@@ -1,5 +1,7 @@
 .rádio {
     display: none;
+    position: fixed;
+    left: -970px;
 
     .rádio__carro {
         position: fixed;
@@ -10,8 +12,9 @@
     .rádio__vídeo {
         position: fixed;
         z-index: -1;
-        bottom: 100px;
-        width: 1450px;
+        left: -400px;
+        bottom: 300px;
+        width: 1050px;
     }
 
     .rádio__controle--anterior {
@@ -46,15 +49,23 @@
     }
 }
 
-@media only screen and (max-width: 767px) {
-  
+@media only screen and (min-width: 768px) {
     .rádio {
-      display: none;
+       
+        position: unset;
+
+        .rádio__vídeo {
+        position: fixed;
+        left: unset;
+        z-index: -1;
+        bottom: 100px;
+        width: 1450px;
     }
-  
+
+    }
 }
 
-@media only screen and (min-width: 1400px) and (max-width: 1599px) {
+@media only screen and (min-width: 1400px) {
     .rádio {
         transform: scale(1.2);
         margin-left: 150px;
@@ -65,7 +76,7 @@
     }
 }
 
-@media only screen and (min-width: 1600px) and (max-width: 1700px) {
+@media only screen and (min-width: 1600px) {
     .rádio {
         transform: scale(1.2);
         margin-left: 150px;
@@ -76,7 +87,7 @@
     }
 }  
 
-@media only screen and (min-width: 1701px) {
+@media only screen and (min-width: 1700px) {
      
     .rádio {
       margin-left: 250px;

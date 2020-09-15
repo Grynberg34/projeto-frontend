@@ -1,22 +1,22 @@
 /* //// Menu //// */
 
 .menu {
-    margin-left: auto;
-    margin-right: auto;
-    padding: 10px;
-    border: 4px solid ivory;
-    border-radius: 10px;
-    width: 40vw;
-    height: 80vh;
-    margin-top: 50px;
-    padding-bottom: 20px;
-  
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  border: 4px solid ivory;
+  border-radius: 10px;
+  width: 80vw;
+  height: 70vh;
+  margin-top: 80px;
+  padding-bottom: 20px;
+
   .menu__linha {
     text-align: center;
   }
-  
-  .menu__titulo {
-  
+
+  .menu__título {
+
     color: ivory;
     font-size: 40px;
     text-align: center;
@@ -24,7 +24,7 @@
     padding-left: 20px;
     padding-right: 20px;
   }
-  
+
   .menu__opção {
     width: 30%;
     margin: 20px;
@@ -34,28 +34,38 @@
     filter: sepia();
     transition: 0.3s linear;
   }
-  
-  .menu__opção:hover {
+}
+
+
+@media only screen and (min-width: 768px){
+
+  .menu {
+      margin-left: auto;
+      margin-right: auto;
+      padding: 10px;
+      border: 4px solid ivory;
+      border-radius: 10px;
+      width: 40vw;
+      height: 80vh;
+      margin-top: 50px;
+      padding-bottom: 20px;
+    
+    .menu__opção:hover {
       filter: none;
       transform: scale(1.1);
     }
-}
-
-@media only screen and (max-width: 767px) {
-  
-  .menu {
-    display: none;
   }
 
 }
 
-@media only screen and (min-width: 1600px) and (max-width: 1700px) {
+
+@media only screen and (min-width: 1600px){
    
   .menu {
 
     margin-top: 75px;
   
-    .menu__titulo {
+    .menu__título {
     
       color: ivory;
       margin-top: 100px;
@@ -64,13 +74,13 @@
 
 }
 
-@media only screen and (min-width: 1701px) {
+@media only screen and (min-width: 1700px) {
    
   .menu {
 
     margin-top: 100px;
   
-    .menu__titulo {
+    .menu__título {
     
       color: ivory;
       margin-top: 100px;

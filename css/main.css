@@ -11,21 +11,6 @@ body button:focus {
   box-shadow: none;
 }
 
-.mobile {
-  display: none;
-}
-.mobile .mobile__texto {
-  margin-top: 300px;
-  font-size: 40px;
-  text-align: center;
-  color: ivory;
-}
-
-@media only screen and (max-width: 767px) {
-  .mobile {
-    display: block;
-  }
-}
 /* //// Menu //// */
 .menu {
   margin-left: auto;
@@ -33,15 +18,15 @@ body button:focus {
   padding: 10px;
   border: 4px solid ivory;
   border-radius: 10px;
-  width: 40vw;
-  height: 80vh;
-  margin-top: 50px;
+  width: 80vw;
+  height: 70vh;
+  margin-top: 80px;
   padding-bottom: 20px;
 }
 .menu .menu__linha {
   text-align: center;
 }
-.menu .menu__titulo {
+.menu .menu__título {
   color: ivory;
   font-size: 40px;
   text-align: center;
@@ -58,30 +43,38 @@ body button:focus {
   filter: sepia();
   transition: 0.3s linear;
 }
-.menu .menu__opção:hover {
-  filter: none;
-  transform: scale(1.1);
-}
 
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 768px) {
   .menu {
-    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    border: 4px solid ivory;
+    border-radius: 10px;
+    width: 40vw;
+    height: 80vh;
+    margin-top: 50px;
+    padding-bottom: 20px;
+  }
+  .menu .menu__opção:hover {
+    filter: none;
+    transform: scale(1.1);
   }
 }
-@media only screen and (min-width: 1600px) and (max-width: 1700px) {
+@media only screen and (min-width: 1600px) {
   .menu {
     margin-top: 75px;
   }
-  .menu .menu__titulo {
+  .menu .menu__título {
     color: ivory;
     margin-top: 100px;
   }
 }
-@media only screen and (min-width: 1701px) {
+@media only screen and (min-width: 1700px) {
   .menu {
     margin-top: 100px;
   }
-  .menu .menu__titulo {
+  .menu .menu__título {
     color: ivory;
     margin-top: 100px;
     margin-bottom: 50px;
@@ -91,9 +84,9 @@ body button:focus {
 .embreve {
   display: none;
 }
-.embreve .embreve__titulo {
+.embreve .embreve__título {
   color: ivory;
-  font-size: 50px;
+  font-size: 40px;
   text-align: center;
   margin-top: 200px;
 }
@@ -101,7 +94,7 @@ body button:focus {
   margin-left: auto;
   margin-right: auto;
   margin-top: 50px;
-  width: 7vw;
+  width: 25vw;
 }
 .embreve .embreve__voltar .embreve__voltar--botão {
   color: ivory;
@@ -118,30 +111,38 @@ body button:focus {
   border: 3px solid grey;
 }
 
-@media only screen and (max-width: 767px) {
-  .mobile {
-    display: block;
+@media only screen and (min-width: 768px) {
+  .embreve .embreve__voltar {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    width: 7vw;
+  }
+  .embreve .embreve__título {
+    color: ivory;
+    font-size: 50px;
   }
 }
-@media only screen and (min-width: 1600px) and (max-width: 1700px) {
-  .embreve .embreve__titulo {
+@media only screen and (min-width: 1600px) {
+  .embreve .embreve__título {
     margin-top: 400px;
   }
 }
-@media only screen and (min-width: 1701px) {
-  .embreve .embreve__titulo {
+@media only screen and (min-width: 1700px) {
+  .embreve .embreve__título {
     margin-top: 500px;
   }
 }
 /* //// Vitrola //// */
 .vitrola {
   display: none;
+  overflow: hidden;
   /* Disco */
   /* Controles */
   /* Rotação do LP */
 }
 .vitrola .vitrola__background {
-  position: fixed;
+  position: absolute;
   z-index: -9999;
 }
 .vitrola .vitrola__voltar {
@@ -151,71 +152,58 @@ body button:focus {
   border: 3px solid black;
   border-radius: 12px;
   margin-top: 50px;
-  margin-left: 550px;
-  cursor: pointer;
+  margin-left: 30vw;
   padding: 10px;
-}
-.vitrola .vitrola__voltar:hover {
-  color: ivory;
-  border: 3px solid ivory;
 }
 .vitrola .vitrola__aparelho {
   position: fixed;
   margin-top: 231px;
-  margin-left: 700px;
+  margin-left: 80px;
 }
 .vitrola .vitrola__aparelho .vitrola__aparelho--img {
-  width: 500px;
-  height: 398px;
-}
-.vitrola .vitrola__dropzone {
-  position: fixed;
-  width: 396px;
-  height: 396px;
-  margin-top: 233px;
-  margin-left: 703px;
+  width: 250px;
 }
 .vitrola .vitrola__haste {
   position: fixed;
-  margin-top: 329px;
-  margin-left: 1041px;
+  margin-top: 279px;
+  margin-left: 251px;
   z-index: 9999;
   transition: 1s linear;
   -webkit-transition: 1s linear;
 }
 .vitrola .vitrola__haste .vitrola__haste--img {
-  width: 92px;
-  height: 271px;
+  width: 46px;
   z-index: 9999;
 }
 .vitrola .vitrola__lp {
   position: fixed;
-  margin-top: 100px;
-  margin-left: 100px;
+  margin-top: 229px;
+  margin-left: 79px;
   transition: 0.3s linear;
   -webkit-transition: 0.3s linear;
 }
 .vitrola .vitrola__lp .vitrola__lp--img {
-  cursor: grab;
+  width: 198px;
 }
 .vitrola .vitrola__cover {
   position: fixed;
-  margin-top: 100px;
+  margin-top: 480px;
   margin-left: 100px;
   transform: rotate(30deg);
-  cursor: pointer;
+}
+.vitrola .vitrola__cover .vitrola__cover--img {
+  width: 193px;
 }
 .vitrola .vitrola__música--pausar, .vitrola .vitrola__música--tocar {
   display: none;
   position: fixed;
-  margin-left: 820px;
-  margin-top: 100px;
+  margin-left: 35vw;
+  margin-top: 150px;
   background: none;
-  border: 6px solid black;
-  border-radius: 10px;
+  border: none;
   padding: 10px;
-  width: 170px;
-  font-size: 60px;
+  width: 85px;
+  font-size: 30px;
   cursor: pointer;
   transition: 1s linear;
 }
@@ -233,8 +221,92 @@ body button:focus {
   animation: rotating 2s linear infinite;
 }
 
-/* Media Queries */
-@media only screen and (min-width: 1600px) and (max-width: 1700px) {
+@media only screen and (min-width: 768px) {
+  .vitrola {
+    transform: none;
+    /* Disco */
+    /* Controles */
+  }
+  .vitrola .vitrola__background {
+    position: fixed;
+    z-index: -9999;
+  }
+  .vitrola .vitrola__voltar {
+    position: fixed;
+    font-size: 30px;
+    background: none;
+    border: 3px solid black;
+    border-radius: 12px;
+    margin-top: 50px;
+    margin-left: 550px;
+    cursor: pointer;
+    padding: 10px;
+  }
+  .vitrola .vitrola__voltar:hover {
+    color: ivory;
+    border: 3px solid ivory;
+  }
+  .vitrola .vitrola__aparelho {
+    position: fixed;
+    margin-top: 231px;
+    margin-left: 700px;
+  }
+  .vitrola .vitrola__aparelho .vitrola__aparelho--img {
+    width: 500px;
+    height: 398px;
+  }
+  .vitrola .vitrola__dropzone {
+    position: fixed;
+    width: 396px;
+    height: 396px;
+    margin-top: 233px;
+    margin-left: 703px;
+  }
+  .vitrola .vitrola__haste {
+    position: fixed;
+    margin-top: 329px;
+    margin-left: 1041px;
+    z-index: 9999;
+    transition: 1s linear;
+    -webkit-transition: 1s linear;
+  }
+  .vitrola .vitrola__haste .vitrola__haste--img {
+    width: 92px;
+    height: 271px;
+    z-index: 9999;
+  }
+  .vitrola .vitrola__lp {
+    position: fixed;
+    margin-top: 100px;
+    margin-left: 100px;
+    transition: 0.3s linear;
+    -webkit-transition: 0.3s linear;
+  }
+  .vitrola .vitrola__lp .vitrola__lp--img {
+    cursor: grab;
+    width: 386px;
+  }
+  .vitrola .vitrola__cover {
+    position: fixed;
+    margin-top: 100px;
+    margin-left: 100px;
+    cursor: pointer;
+  }
+  .vitrola .vitrola__cover .vitrola__cover--img {
+    width: 398px;
+  }
+  .vitrola .vitrola__música--pausar, .vitrola .vitrola__música--tocar {
+    position: fixed;
+    margin-left: 820px;
+    margin-top: 100px;
+    background: none;
+    padding: 10px;
+    width: 170px;
+    font-size: 60px;
+    cursor: pointer;
+  }
+}
+@media only screen and (min-width: 1600px) {
   .vitrola {
     margin-left: 150px;
     margin-top: 75px;
@@ -244,7 +316,7 @@ body button:focus {
     margin-top: -75px;
   }
 }
-@media only screen and (min-width: 1701px) {
+@media only screen and (min-width: 1700px) {
   .vitrola {
     margin-left: 300px;
     margin-top: 150px;
@@ -256,6 +328,8 @@ body button:focus {
 }
 .rádio {
   display: none;
+  position: fixed;
+  left: -970px;
 }
 .rádio .rádio__carro {
   position: fixed;
@@ -265,8 +339,9 @@ body button:focus {
 .rádio .rádio__vídeo {
   position: fixed;
   z-index: -1;
-  bottom: 100px;
-  width: 1450px;
+  left: -400px;
+  bottom: 300px;
+  width: 1050px;
 }
 .rádio .rádio__controle--anterior {
   position: fixed;
@@ -293,12 +368,19 @@ body button:focus {
   cursor: pointer;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 768px) {
   .rádio {
-    display: none;
+    position: unset;
+  }
+  .rádio .rádio__vídeo {
+    position: fixed;
+    left: unset;
+    z-index: -1;
+    bottom: 100px;
+    width: 1450px;
   }
 }
-@media only screen and (min-width: 1400px) and (max-width: 1599px) {
+@media only screen and (min-width: 1400px) {
   .rádio {
     transform: scale(1.2);
     margin-left: 150px;
@@ -307,7 +389,7 @@ body button:focus {
     bottom: -300px;
   }
 }
-@media only screen and (min-width: 1600px) and (max-width: 1700px) {
+@media only screen and (min-width: 1600px) {
   .rádio {
     transform: scale(1.2);
     margin-left: 150px;
@@ -316,7 +398,7 @@ body button:focus {
     bottom: -600px;
   }
 }
-@media only screen and (min-width: 1701px) {
+@media only screen and (min-width: 1700px) {
   .rádio {
     margin-left: 250px;
     transform: scale(1.4);

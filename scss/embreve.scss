@@ -4,9 +4,9 @@
     
     display: none;
   
-  .embreve__titulo {
+  .embreve__título {
         color: ivory;
-        font-size: 50px;
+        font-size: 40px;
         text-align: center;
         margin-top: 200px;
     }
@@ -15,7 +15,7 @@
         margin-left: auto;
         margin-right: auto;
         margin-top: 50px;
-        width: 7vw;
+        width: 25vw;
 
         .embreve__voltar--botão {
             color: ivory;
@@ -37,30 +37,43 @@
 
 }
 
-@media only screen and (max-width: 767px) {
-  
-    .mobile {
-      display: block;
-    }
-  
-}
-  
-@media only screen and (min-width: 1600px) and (max-width: 1700px) {
+
+@media only screen and (min-width: 768px) {
 
     .embreve {
     
-        .embreve__titulo {
+        .embreve__voltar {
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+            width: 7vw;
+        }
+
+        .embreve__título {
+            color: ivory;
+            font-size: 50px;
+        }
+    }
+  
+}
+
+
+@media only screen and (min-width: 1600px) {
+
+    .embreve {
+    
+        .embreve__título {
             margin-top: 400px;
         }
     }
   
 }
 
-@media only screen and (min-width: 1701px) {
+@media only screen and (min-width: 1700px) {
    
     .embreve {
     
-        .embreve__titulo {
+        .embreve__título {
             margin-top: 500px;
         }
     }

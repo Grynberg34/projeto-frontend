@@ -3,12 +3,13 @@
 .vitrola {
 
   display: none;
+  overflow: hidden;
 
   .vitrola__background {
-    position: fixed;
+    position: absolute;
     z-index: -9999;
   }
-  
+
   .vitrola__voltar {
     position: fixed;
     font-size: 30px;
@@ -16,46 +17,31 @@
     border: 3px solid black;
     border-radius: 12px;
     margin-top: 50px;
-    margin-left: 550px;
-    cursor: pointer;
+    margin-left: 30vw;
     padding: 10px;
   }
-  
-  .vitrola__voltar:hover {
-    color: ivory;
-    border: 3px solid ivory;
-  }
-  
+
+
   .vitrola__aparelho {
     position: fixed;
     margin-top: 231px;
-    margin-left: 700px;
+    margin-left: 80px;
 
     .vitrola__aparelho--img {
-      width: 500px;
-      height: 398px;
+      width: 250px;
     }
-  }
-  
-  .vitrola__dropzone {
-    position: fixed;
-    width: 396px;
-    height: 396px;
-    margin-top: 233px;
-    margin-left: 703px;
   }
   
   .vitrola__haste {
     position: fixed;
-    margin-top: 329px;
-    margin-left: 1041px;
+    margin-top: 279px;
+    margin-left: 251px;
     z-index: 9999;
     transition: 1s linear;
     -webkit-transition: 1s linear;
 
     .vitrola__haste--img {
-      width: 92px;
-      height: 271px;
+      width: 46px;
       z-index: 9999;
     }
   }
@@ -65,24 +51,27 @@
   
   .vitrola__lp {
     position: fixed;
-    margin-top: 100px;
-    margin-left: 100px;
+    margin-top: 229px;
+    margin-left: 79px;
     transition: 0.3s linear;
     -webkit-transition: 0.3s linear;
 
 
     .vitrola__lp--img {
-      cursor: grab;
+      width: 198px;
     }
 
   }
   
   .vitrola__cover {
     position: fixed;
-    margin-top: 100px;
+    margin-top: 480px;
     margin-left: 100px;
     transform: rotate(30deg);
-    cursor: pointer;
+
+    .vitrola__cover--img {
+      width: 193px;
+    }
   }
   
   /* Controles */
@@ -90,18 +79,17 @@
   .vitrola__música--pausar, .vitrola__música--tocar {
     display: none;
     position: fixed;
-    margin-left: 820px;
-    margin-top: 100px;
+    margin-left: 35vw;
+    margin-top: 150px;
     background: none;
-    border: 6px solid black;
-    border-radius: 10px;
+    border: none;
     padding: 10px;
-    width: 170px;
-    font-size: 60px;
+    width: 85px;
+    font-size: 30px;
     cursor: pointer;
     transition: 1s linear;
   }
-  
+
   /* Rotação do LP */  
 
   @mixin transform($property) {
@@ -122,12 +110,117 @@
     -webkit-animation: rotating 2s linear infinite;
     -moz-animation: rotating 2s linear infinite;
     animation: rotating 2s linear infinite;
-  }
+  } 
+
 }
 
-/* Media Queries */  
+@media only screen and (min-width: 768px) {
+  .vitrola {
+    transform: none;
 
-@media only screen and (min-width: 1600px) and (max-width: 1700px) {
+    .vitrola__background {
+      position: fixed;
+      z-index: -9999;
+    }
+    
+    .vitrola__voltar {
+      position: fixed;
+      font-size: 30px;
+      background: none;
+      border: 3px solid black;
+      border-radius: 12px;
+      margin-top: 50px;
+      margin-left: 550px;
+      cursor: pointer;
+      padding: 10px;
+    }
+    
+    .vitrola__voltar:hover {
+      color: ivory;
+      border: 3px solid ivory;
+    }
+    
+    .vitrola__aparelho {
+      position: fixed;
+      margin-top: 231px;
+      margin-left: 700px;
+  
+      .vitrola__aparelho--img {
+        width: 500px;
+        height: 398px;
+      }
+    }
+    
+    .vitrola__dropzone {
+      position: fixed;
+      width: 396px;
+      height: 396px;
+      margin-top: 233px;
+      margin-left: 703px;
+    }
+    
+    .vitrola__haste {
+      position: fixed;
+      margin-top: 329px;
+      margin-left: 1041px;
+      z-index: 9999;
+      transition: 1s linear;
+      -webkit-transition: 1s linear;
+  
+      .vitrola__haste--img {
+        width: 92px;
+        height: 271px;
+        z-index: 9999;
+      }
+    }
+  
+    
+    /* Disco */
+    
+    .vitrola__lp {
+      position: fixed;
+      margin-top: 100px;
+      margin-left: 100px;
+      transition: 0.3s linear;
+      -webkit-transition: 0.3s linear;
+  
+  
+      .vitrola__lp--img {
+        cursor: grab;
+        width: 386px;
+      }
+  
+    }
+    
+    .vitrola__cover {
+      position: fixed;
+      margin-top: 100px;
+      margin-left: 100px;
+      cursor: pointer;
+
+      .vitrola__cover--img {
+        width: 398px;
+      }
+    }
+    
+    /* Controles */
+    
+    .vitrola__música--pausar, .vitrola__música--tocar {
+      position: fixed;
+      margin-left: 820px;
+      margin-top: 100px;
+      background: none;
+      padding: 10px;
+      width: 170px;
+      font-size: 60px;
+      cursor: pointer;
+    }
+   
+  }
+
+}
+
+@media only screen and (min-width: 1600px) {
   .vitrola {
     margin-left: 150px;
     margin-top: 75px;
@@ -141,7 +234,7 @@
 
 }
 
-@media only screen and (min-width: 1701px) {
+@media only screen and (min-width: 1700px) {
    
   .vitrola {
     margin-left: 300px;
