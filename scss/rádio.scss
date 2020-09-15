@@ -36,13 +36,13 @@
 
     .rádio__voltar {
         position: fixed;
-        margin-top: 350px;
-        margin-left: 360px;
+        margin-top: 380px;
+        margin-left: 1070px;
 
         .rádio__voltar--botão {
             color: ivory;
             border: none;
-            font-size: 30px;
+            font-size: 25px;
             background: none;
             cursor: pointer;
         }
@@ -55,12 +55,21 @@
         position: unset;
 
         .rádio__vídeo {
-        position: fixed;
-        left: unset;
-        z-index: -1;
-        bottom: 100px;
-        width: 1450px;
-    }
+            left: unset;
+            z-index: -1;
+            bottom: 100px;
+            width: 1450px;
+        }
+        
+        .rádio__voltar {
+            margin-top: 350px;
+            margin-left: 360px;
+    
+            .rádio__voltar--botão {
+                font-size: 30px;
+                cursor: pointer;
+            }
+        }
 
     }
 }
