@@ -6,7 +6,7 @@ document.getElementsByClassName("menu__opção")[0].addEventListener("click", fu
     document.getElementsByClassName("menu")[0].style.display = "none";
     document.getElementsByClassName("vitrola")[0].style.display = "block";
 
-    if (screen.innerWidth < 767) {
+    if (screen.width < 767) {
         document.getElementsByClassName("vitrola__música--tocar")[0].style.display = "block"
     }
     
@@ -162,7 +162,7 @@ document.getElementsByClassName("vitrola__voltar")[0].addEventListener("click", 
 // Versão Mobile
 
 function vitrolaMobile() {
-    if (window.innerWidth < 768) {
+    if (screen.width < 768) {
 
         document.getElementsByClassName("vitrola__música--tocar")[0].style.display = "block"
         document.getElementsByClassName("vitrola__background")[0].src = "./img/vitrola/background-mobile.jpg"
@@ -207,24 +207,27 @@ function vitrolaMobile() {
         })
     }
 
-    document.getElementsByClassName("vitrola__voltar")[0].addEventListener("click", function voltarMenuInicialMobile(){
-        document.getElementsByClassName("menu")[0].style.display = "block"
-        document.getElementsByClassName("vitrola")[0].style.display = "none"
-    
-        //resetar Vitrola ao retornar à página inicial
-    
-        function resetVitrolaMobile(){
-            document.getElementsByClassName("vitrola__música")[0].pause()
-            document.getElementsByClassName("vitrola__música")[0].currentTime = 0
-            document.getElementsByClassName("vitrola__lp--img")[0].classList.remove("rotating")
-            document.getElementsByClassName("vitrola__haste")[0].style.marginTop = "279px"
-            document.getElementsByClassName("vitrola__haste")[0].style.marginLeft = "251px"
-            document.getElementsByClassName("vitrola__haste")[0].style.transform = "none"
-            document.getElementsByClassName("vitrola__música--pausar")[0].style.display = "none"
-        }
-    
-        resetVitrolaMobile()
-    })
+    if (screen.width < 768) {
+
+        document.getElementsByClassName("vitrola__voltar")[0].addEventListener("click", function voltarMenuInicialMobile(){
+            document.getElementsByClassName("menu")[0].style.display = "block"
+            document.getElementsByClassName("vitrola")[0].style.display = "none"
+        
+            //resetar Vitrola ao retornar à página inicial
+        
+            function resetVitrolaMobile(){
+                document.getElementsByClassName("vitrola__música")[0].pause()
+                document.getElementsByClassName("vitrola__música")[0].currentTime = 0
+                document.getElementsByClassName("vitrola__lp--img")[0].classList.remove("rotating")
+                document.getElementsByClassName("vitrola__haste")[0].style.marginTop = "279px"
+                document.getElementsByClassName("vitrola__haste")[0].style.marginLeft = "251px"
+                document.getElementsByClassName("vitrola__haste")[0].style.transform = "none"
+                document.getElementsByClassName("vitrola__música--pausar")[0].style.display = "none"
+            }
+        
+            resetVitrolaMobile()
+        })
+    }
     
 }
 
