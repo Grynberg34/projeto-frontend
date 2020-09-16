@@ -31,6 +31,7 @@ body button:focus {
   font-size: 40px;
   text-align: center;
   margin-bottom: 30px;
+  margin-top: 40px;
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -55,6 +56,9 @@ body button:focus {
     height: 80vh;
     margin-top: 50px;
     padding-bottom: 20px;
+  }
+  .menu .menu__título {
+    margin-top: 30px;
   }
   .menu .menu__opção:hover {
     filter: none;
@@ -136,7 +140,7 @@ body button:focus {
 /* //// Vitrola //// */
 .vitrola {
   display: none;
-  overflow: hidden;
+  overflow-x: hidden;
   /* Disco */
   /* Controles */
   /* Rotação do LP */
@@ -144,15 +148,17 @@ body button:focus {
 .vitrola .vitrola__background {
   position: absolute;
   z-index: -9999;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
 }
 .vitrola .vitrola__voltar {
   position: fixed;
   font-size: 30px;
   background: none;
-  border: 3px solid black;
-  border-radius: 12px;
+  border: none;
   margin-top: 50px;
-  margin-left: 30vw;
+  margin-left: 100px;
   padding: 10px;
 }
 .vitrola .vitrola__aparelho {
@@ -197,7 +203,7 @@ body button:focus {
 .vitrola .vitrola__música--pausar, .vitrola .vitrola__música--tocar {
   display: none;
   position: fixed;
-  margin-left: 35vw;
+  margin-left: 140px;
   margin-top: 150px;
   background: none;
   border: none;
@@ -228,15 +234,11 @@ body button:focus {
     /* Controles */
   }
   .vitrola .vitrola__background {
-    position: fixed;
-    z-index: -9999;
+    height: unset;
   }
   .vitrola .vitrola__voltar {
     position: fixed;
     font-size: 30px;
-    background: none;
-    border: 3px solid black;
-    border-radius: 12px;
     margin-top: 50px;
     margin-left: 550px;
     cursor: pointer;
@@ -244,7 +246,6 @@ body button:focus {
   }
   .vitrola .vitrola__voltar:hover {
     color: ivory;
-    border: 3px solid ivory;
   }
   .vitrola .vitrola__aparelho {
     position: fixed;
@@ -365,7 +366,7 @@ body button:focus {
   border: none;
   font-size: 25px;
   background: none;
-  cursor: pointer;
+  transform: rotate(3deg);
 }
 
 @media only screen and (min-width: 768px) {
@@ -385,6 +386,7 @@ body button:focus {
   .rádio .rádio__voltar .rádio__voltar--botão {
     font-size: 30px;
     cursor: pointer;
+    transform: none;
   }
 }
 @media only screen and (min-width: 1400px) {

@@ -160,6 +160,7 @@ function vitrolaMobile() {
     if (window.innerWidth < 768) {
 
         document.getElementsByClassName("vitrola__música--tocar")[0].style.display = "block"
+        document.getElementsByClassName("vitrola__background")[0].src = "./img/vitrola/background-mobile.jpg"
 
         document.getElementsByClassName("vitrola__música--pausar")[0].addEventListener("click", function pausarMobile() {
             document.getElementsByClassName("vitrola__música")[0].pause()
@@ -173,9 +174,9 @@ function vitrolaMobile() {
         })
         
         document.getElementsByClassName("vitrola__música--tocar")[0].addEventListener("click", function tocarMobile() {
-            document.getElementsByClassName("vitrola__haste")[0].style.marginTop = "270.5px"
+            document.getElementsByClassName("vitrola__haste")[0].style.marginTop = "271.5px"
             document.getElementsByClassName("vitrola__haste")[0].style.marginLeft = "233.5px"
-            document.getElementsByClassName("vitrola__haste")[0].style.transform = "rotate(18deg)"
+            document.getElementsByClassName("vitrola__haste")[0].style.transform = "rotate(15deg)"
         
             document.getElementsByClassName("vitrola__lp--img")[0].classList.add("rotating")
         

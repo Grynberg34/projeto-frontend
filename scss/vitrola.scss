@@ -3,21 +3,23 @@
 .vitrola {
 
   display: none;
-  overflow: hidden;
+  overflow-x: hidden;
 
   .vitrola__background {
     position: absolute;
     z-index: -9999;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
   }
 
   .vitrola__voltar {
     position: fixed;
     font-size: 30px;
     background: none;
-    border: 3px solid black;
-    border-radius: 12px;
+    border: none;
     margin-top: 50px;
-    margin-left: 30vw;
+    margin-left: 100px;
     padding: 10px;
   }
 
@@ -79,7 +81,7 @@
   .vitrola__música--pausar, .vitrola__música--tocar {
     display: none;
     position: fixed;
-    margin-left: 35vw;
+    margin-left: 140px;
     margin-top: 150px;
     background: none;
     border: none;
@@ -119,16 +121,12 @@
     transform: none;
 
     .vitrola__background {
-      position: fixed;
-      z-index: -9999;
+      height: unset;
     }
     
     .vitrola__voltar {
       position: fixed;
       font-size: 30px;
-      background: none;
-      border: 3px solid black;
-      border-radius: 12px;
       margin-top: 50px;
       margin-left: 550px;
       cursor: pointer;
@@ -137,7 +135,6 @@
     
     .vitrola__voltar:hover {
       color: ivory;
-      border: 3px solid ivory;
     }
     
     .vitrola__aparelho {
