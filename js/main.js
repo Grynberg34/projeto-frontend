@@ -5,6 +5,11 @@
 document.getElementsByClassName("menu__opção")[0].addEventListener("click", function mostrarVitrola(){
     document.getElementsByClassName("menu")[0].style.display = "none";
     document.getElementsByClassName("vitrola")[0].style.display = "block";
+
+    if (screen.innerWidth < 767) {
+        document.getElementsByClassName("vitrola__música--tocar")[0].style.display = "block"
+    }
+    
 })
 
 // 2. Rádio
