@@ -242,23 +242,25 @@ document.getElementsByClassName("rádio__controle--próxima")[0].addEventListene
     
     let música = document.getElementsByClassName("rádio__música");
 
+    var número = new Set();
+
     for (let i = 0; i < música.length; i++) {
         if (música[i].classList.contains("tocando")) {
-            var número = i
+            número.add(i)
         }
     }
 
-    if (número == 0) {
+    if (número.has(0)) {
         música[0].classList.remove("tocando")
         música[1].classList.add("tocando")
     }
 
-    if (número == 1) {
+    if (número.has(1)) {
         música[1].classList.remove("tocando")
         música[2].classList.add("tocando")
     }
 
-    if (número == 2) {
+    if (número.has(2)) {
         música[2].classList.remove("tocando")
         música[0].classList.add("tocando")
     }
@@ -282,23 +284,25 @@ document.getElementsByClassName("rádio__controle--anterior")[0].addEventListene
 
     let música = document.getElementsByClassName("rádio__música");
 
+    var número = new Set();
+
     for (let i = 0; i < música.length; i++) {
         if (música[i].classList.contains("tocando")) {
-            var número = i;
+            número.add(i);
         }
     }
 
-    if (número == 0) {
+    if (número.has(0)) {
         música[0].classList.remove("tocando")
         música[2].classList.add("tocando")
     }
 
-    if (número == 1) {
+    if (número.has(1)) {
         música[1].classList.remove("tocando")
         música[0].classList.add("tocando")
     }
 
-    if (número == 2) {
+    if (número.has(2)) {
         música[2].classList.remove("tocando")
         música[1].classList.add("tocando")
     }
