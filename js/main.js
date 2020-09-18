@@ -81,7 +81,7 @@ document.getElementsByClassName("vitrola__música--pausar")[0].addEventListener(
     document.getElementsByClassName("vitrola__música--tocar")[0].style.display = "block"
 })
 
-document.getElementsByClassName("vitrola__música--tocar")[0].addEventListener("click", () => {
+document.getElementsByClassName("vitrola__música--tocar")[0].addEventListener("click", async () => {
     document.getElementsByClassName("vitrola__haste")[0].style.marginTop = "312px"
     document.getElementsByClassName("vitrola__haste")[0].style.marginLeft = "1006px"
     document.getElementsByClassName("vitrola__haste")[0].style.transform = "rotate(18deg)"
@@ -93,11 +93,12 @@ document.getElementsByClassName("vitrola__música--tocar")[0].addEventListener("
 
     // Essas duas linhas são para evitar um problema no Safari, que só toca o áudio da segunda vez que é dado o comando de play
     document.getElementsByClassName("vitrola__música")[0].play()
-    document.getElementsByClassName("vitrola__música")[0].pause()    
+    document.getElementsByClassName("vitrola__música")[0].pause()   
+    
+    await new Promise(resolve => setTimeout(resolve, 1000));
 
-    setTimeout(() => { 
     document.getElementsByClassName("vitrola__música")[0].play();
-    document.getElementsByClassName("vitrola__música--pausar")[0].style.display = "block" }, 500);
+    document.getElementsByClassName("vitrola__música--pausar")[0].style.display = "block"
 
     document.getElementsByClassName("vitrola__música")[0].onended = () =>  {
         document.getElementsByClassName("vitrola__lp--img")[0].classList.remove("rotating")
@@ -178,7 +179,7 @@ let vitrolaMobile = (() => {
             document.getElementsByClassName("vitrola__música--tocar")[0].style.display = "block"
         })
         
-        document.getElementsByClassName("vitrola__música--tocar")[0].addEventListener("click", () => {
+        document.getElementsByClassName("vitrola__música--tocar")[0].addEventListener("click", async () => {
             document.getElementsByClassName("vitrola__haste")[0].style.marginTop = "271.5px"
             document.getElementsByClassName("vitrola__haste")[0].style.marginLeft = "233.5px"
             document.getElementsByClassName("vitrola__haste")[0].style.transform = "rotate(15deg)"
@@ -192,9 +193,10 @@ let vitrolaMobile = (() => {
             document.getElementsByClassName("vitrola__música")[0].play()
             document.getElementsByClassName("vitrola__música")[0].pause()    
         
-            setTimeout(() => { 
+            await new Promise(resolve => setTimeout(resolve, 1000));
+
             document.getElementsByClassName("vitrola__música")[0].play();
-            document.getElementsByClassName("vitrola__música--pausar")[0].style.display = "block" }, 500);
+            document.getElementsByClassName("vitrola__música--pausar")[0].style.display = "block"
         
             document.getElementsByClassName("vitrola__música")[0].onended = () => {
                 document.getElementsByClassName("vitrola__lp--img")[0].classList.remove("rotating")
