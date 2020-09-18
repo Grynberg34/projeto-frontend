@@ -17,9 +17,9 @@ document.getElementsByClassName("menu__opção")[1].addEventListener("click", fu
     document.getElementsByClassName("menu")[0].style.display = "none";
     document.getElementsByClassName("rádio")[0].style.display = "block";
 
-    var música = document.getElementsByClassName("rádio__música")
+    let música = document.getElementsByClassName("rádio__música")
 
-    for (var i = 0; i < música.length; i++) {
+    for (let i = 0; i < música.length; i++) {
         música[i].play();
         if (música[i].classList.contains("tocando")) {
             música[i].volume = 1
@@ -240,11 +240,11 @@ vitrolaMobile()
 
 document.getElementsByClassName("rádio__controle--próxima")[0].addEventListener("click", function tocarpróxima(){
     
-    var música = document.getElementsByClassName("rádio__música");
+    let música = document.getElementsByClassName("rádio__música");
 
-    for (var i = 0; i < música.length; i++) {
+    for (let i = 0; i < música.length; i++) {
         if (música[i].classList.contains("tocando")) {
-            var número = i
+            let número = i
         }
     }
 
@@ -264,7 +264,7 @@ document.getElementsByClassName("rádio__controle--próxima")[0].addEventListene
     }
 
 
-    for (var i = 0; i < música.length; i++) {
+    for (let i = 0; i < música.length; i++) {
 
         if (música[i].classList.contains("tocando")) {
             música[i].volume = 1
@@ -280,11 +280,11 @@ document.getElementsByClassName("rádio__controle--próxima")[0].addEventListene
 
 document.getElementsByClassName("rádio__controle--anterior")[0].addEventListener("click", function tocaranterior(){
 
-    var música = document.getElementsByClassName("rádio__música");
+    let música = document.getElementsByClassName("rádio__música");
 
-    for (var i = 0; i < música.length; i++) {
+    for (let i = 0; i < música.length; i++) {
         if (música[i].classList.contains("tocando")) {
-            var número = i;
+            let número = i;
         }
     }
 
@@ -304,7 +304,7 @@ document.getElementsByClassName("rádio__controle--anterior")[0].addEventListene
     }
 
 
-    for (var i = 0; i < música.length; i++) {
+    for (let i = 0; i < música.length; i++) {
 
         if (música[i].classList.contains("tocando")) {
             música[i].volume = 1
@@ -321,10 +321,10 @@ document.getElementsByClassName("rádio__voltar")[0].addEventListener("click", f
     document.getElementsByClassName("menu")[0].style.display = "block"
     document.getElementsByClassName("rádio")[0].style.display = "none"
 
-    var músicas = document.getElementsByClassName("rádio__música")
-    var músicaTocando = document.getElementsByClassName("rádio__músicas--tocando")
+    let músicas = document.getElementsByClassName("rádio__música")
+    let músicaTocando = document.getElementsByClassName("rádio__músicas--tocando")
 
-    for (var i=0; músicas.length; i++) {
+    for (let i=0; músicas.length; i++) {
         músicas[i].pause();
         músicas[i].currentTime = 0;
     }
