@@ -27,7 +27,7 @@
 
   <!-- Menu -->
 
-  <div role="menu" class="menu">
+  <div role="menu" class="menu" aria-live="polite">
     <div>
       <h1 class="menu__título">Escolha uma nostalgia</h1>
 
@@ -50,7 +50,7 @@
 
   <!---- Em breve ---->
 
-  <div class="embreve">
+  <div class="embreve" aria-live="polite">
 
     <h1 class="embreve__título">Disponível em breve!</h1>
     
@@ -63,7 +63,7 @@
 
   <!---- Vitrola ---->
 
-  <div class="vitrola">
+  <div class="vitrola" aria-live="polite">
 
     <!-- Background Vitrola -->
 
@@ -79,8 +79,8 @@
       <source src="./img/vitrola/ecstasy-of-gold.mp3" type="audio/mpeg">
     </audio>
 
-    <button role="button" class="vitrola__música--pausar"  aria-labelledby="Botão para pausar a música">Pause</button>
-    <button role="button" class="vitrola__música--tocar"  aria-labelledby="Botão para tocar a música">Play</button>
+    <button role="button status" class="vitrola__música--pausar"  aria-labelledby="Botão para pausar a música" aria-live="polite">Pause</button>
+    <button role="button status" class="vitrola__música--tocar"  aria-labelledby="Botão para tocar a música" aria-live="polite">Play</button>
 
     <!-- Aparelho -->
 
@@ -101,7 +101,7 @@
     </div>
 
     <div class="vitrola__cover">
-      <input type="image" src="./img/vitrola/cover.png" class="vitrola__cover--img" alt="capa do disco 'The Good, The Bad and The Ugly'. Ao clicar aparece o disco LP que estava atrás da capa. Clique mais uma vez para posicionar o LP na vitrola e o botão para tocar a música ficar disponível para ser clicado." >
+      <input type="image" src="./img/vitrola/cover.png" class="vitrola__cover--img" alt="capa do disco 'The Good, The Bad and The Ugly'. Ao clicar aparece o disco LP que estava atrás da capa. Clique mais uma vez para posicionar o LP na vitrola e o botão para tocar a música ficar disponível para ser clicado." role="status" aria-live="polite" >
     </div>
 
   </div>
@@ -110,7 +110,7 @@
 
   <!---- Rádio ---->
   
-  <div class="rádio">
+  <div class="rádio" aria-live="polite">
     
     <!-- Carro -->
 
