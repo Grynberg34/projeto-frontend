@@ -61,10 +61,24 @@ document.getElementsByClassName("embreve__voltar")[0].addEventListener("click", 
 
 // Mostrar LP
 
+var clickCount = new Set();
+
 document.getElementsByClassName("vitrola__cover")[0].addEventListener("click", () => {
+
+    if (clickCount.has(2)) {
+        let node = document.getElementsByClassName("vitrola__lp--img")[0]
+        document.getElementsByClassName("vitrola__dropzone")[0].appendChild(node); 
+        document.getElementsByClassName("vitrola__música--tocar")[0].style.display = "block"
+    }
+
+    else
+
     document.getElementsByClassName("vitrola__lp")[0].style.opacity = 1;
     document.getElementsByClassName("vitrola__lp")[0].style.marginLeft = "244px";
     document.getElementsByClassName("vitrola__lp")[0].style.marginTop = "183px";
+    clickCount.add(2);
+
+
 })
 
 

@@ -6,10 +6,6 @@ body {
   font-family: "Lobster", "cursive";
   overflow: hidden;
 }
-body button:focus {
-  outline: none;
-  box-shadow: none;
-}
 
 /* //// Menu //// */
 .menu {
