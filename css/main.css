@@ -451,6 +451,25 @@ body {
   background: none;
   cursor: pointer;
 }
+.boombox .boombox__caixas {
+  position: fixed;
+  margin-left: 655px;
+  margin-top: 481px;
+}
+.boombox .boombox__caixas .boombox__caixas__img {
+  width: 190px;
+  -webkit-animation: vibrating 0.5s linear infinite;
+  -moz-animation: vibrating 0.5s linear infinite;
+  animation: vibrating 0.5s linear infinite;
+}
+@keyframes vibrating {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
 
 @media only screen and (min-width: 768px) {
   .boombox {
@@ -460,10 +479,6 @@ body {
     margin-left: 470px;
   }
   .boombox .boombox__voltar .boombox__voltar--botão {
-    color: black;
-    border: none;
-    font-size: 25px;
-    background: none;
     cursor: pointer;
   }
 }
@@ -477,6 +492,13 @@ body {
   }
   .boombox .boombox__voltar .boombox__voltar--botão {
     font-size: 42px;
+  }
+  .boombox .boombox__caixas {
+    margin-left: 937px;
+    margin-top: 688px;
+  }
+  .boombox .boombox__caixas .boombox__caixas__img {
+    width: 270px;
   }
 }
 
