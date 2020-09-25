@@ -412,5 +412,72 @@ body {
     bottom: -600px;
   }
 }
+.discoteca {
+  position: absolute;
+  left: -480px;
+  display: none;
+}
+.discoteca .discoteca__globo {
+  position: fixed;
+  object-fit: cover;
+}
+.discoteca .discoteca__globo .discoteca__globo__vídeo {
+  position: absolute;
+  width: 1000px;
+}
+.discoteca .discoteca__luzes {
+  position: fixed;
+  width: 500vw;
+  height: 200vh;
+  background-image: linear-gradient(0deg, rgba(253, 45, 91, 0.5) 0%, rgba(0, 9, 255, 0.5) 100%);
+  z-index: 2;
+}
+.discoteca .discoteca__voltar {
+  position: fixed;
+  margin-top: 473px;
+  margin-left: 600px;
+  z-index: 3;
+}
+.discoteca .discoteca__voltar .discoteca__voltar--botão {
+  position: fixed;
+  color: ivory;
+  border: none;
+  font-size: 25px;
+  background: none;
+}
+
+@media only screen and (min-width: 400px) {
+  .discoteca {
+    left: -460px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .discoteca {
+    position: unset;
+  }
+  .discoteca .discoteca__globo .discoteca__globo__vídeo {
+    width: 1400px;
+  }
+  .discoteca .discoteca__luzes {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(0deg, rgba(253, 45, 91, 0.5) 0%, rgba(0, 9, 255, 0.5) 100%);
+    z-index: 2;
+  }
+  .discoteca .discoteca__voltar {
+    margin-top: 73px;
+    margin-left: 880px;
+  }
+  .discoteca .discoteca__voltar .discoteca__voltar--botão {
+    position: fixed;
+    cursor: pointer;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .discoteca {
+    transform: scale(1.4);
+  }
+}
 
 /*# sourceMappingURL=main.css.map */

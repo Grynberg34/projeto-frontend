@@ -30,10 +30,11 @@ document.getElementsByClassName("menu__opção")[1].addEventListener("click", ()
 
 })
 
-// 3. Discoteca (em breve)
+// 3. Discoteca
 document.getElementsByClassName("menu__opção")[2].addEventListener("click", () => {
     document.getElementsByClassName("menu")[0].style.display = "none";
-    document.getElementsByClassName("embreve")[0].style.display = "block";
+    document.getElementsByClassName("discoteca")[0].style.display = "block";
+    document.getElementsByClassName("discoteca__música")[0].play()
 })
 
 
@@ -352,4 +353,74 @@ document.getElementsByClassName("rádio__voltar")[0].addEventListener("click", (
     músicaTocando.pause();
     músicaTocando.currentTime = 0;
     
+})
+
+//// DISCOTECA ////
+
+// Trocar Luzes//
+
+async function trocarLuzes() {
+
+    //GRADIENTE 1
+
+    await new Promise(resolve => setTimeout(resolve, 2000));
+
+    document.getElementsByClassName("discoteca__luzes")[0].style.backgroundImage = "linear-gradient(0deg, rgba(60,253,45,0.5) 0%, rgba(255,0,215,0.5) 100%)"
+    
+    await new Promise(resolve => setTimeout(resolve, 2000));
+
+    //GRADIENTE 2
+
+    document.getElementsByClassName("discoteca__luzes")[0].style.backgroundImage = "linear-gradient(0deg, rgba(234,253,45,0.5) 0%, rgba(0,255,239,0.5) 100%)"
+
+    await new Promise(resolve => setTimeout(resolve, 2000));
+
+    //GRADIENTE 3
+
+    document.getElementsByClassName("discoteca__luzes")[0].style.backgroundImage = "linear-gradient(0deg, rgba(94,253,45,0.5) 0%, rgba(255,145,0,0.5) 100%)"
+
+    await new Promise(resolve => setTimeout(resolve, 2000));
+
+    //GRADIENTE 4
+
+    document.getElementsByClassName("discoteca__luzes")[0].style.backgroundImage = "linear-gradient(0deg, rgba(237,45,253,0.5) 0%, rgba(255,0,26,0.5) 100%)"
+
+    await new Promise(resolve => setTimeout(resolve, 2000));
+
+    //GRADIENTE 5
+
+    document.getElementsByClassName("discoteca__luzes")[0].style.backgroundImage = "linear-gradient(0deg, rgba(45,185,253,0.5) 0%, rgba(35,255,0,0.5) 100%)"
+
+    await new Promise(resolve => setTimeout(resolve, 2000));
+
+    //GRADIENTE 6
+
+    document.getElementsByClassName("discoteca__luzes")[0].style.backgroundImage = "linear-gradient(0deg, rgba(253,45,252,0.5) 0%, rgba(249,255,0,0.5) 100%)"
+
+    await new Promise(resolve => setTimeout(resolve, 2000));
+
+    //GRADIENTE 7
+
+    document.getElementsByClassName("discoteca__luzes")[0].style.backgroundImage = "linear-gradient(0deg, rgba(253,45,252,0.5) 0%, rgba(0,255,231,0.5) 100%)"
+
+    await new Promise(resolve => setTimeout(resolve, 2000));
+
+    //GRADIENTE 8
+
+    document.getElementsByClassName("discoteca__luzes")[0].style.backgroundImage = "linear-gradient(0deg, rgba(45,253,149,0.5) 0%, rgba(255,0,228,0.5) 100%)"
+
+}
+
+trocarLuzes()
+
+setInterval(function () {trocarLuzes()}, 16000);
+
+
+// Voltar para o Menu Inicial
+
+document.getElementsByClassName("discoteca__voltar--botão")[0].addEventListener("click", () => {
+    document.getElementsByClassName("menu")[0].style.display = "block"
+    document.getElementsByClassName("discoteca")[0].style.display = "none"
+    document.getElementsByClassName("discoteca__música")[0].pause();
+    document.getElementsByClassName("discoteca__música")[0].currentTime = 0;
 })

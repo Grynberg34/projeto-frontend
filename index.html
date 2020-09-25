@@ -14,8 +14,6 @@
 
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
-  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
   <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
@@ -40,7 +38,7 @@
 
       <div class="menu__linha row">
 
-        <input role="menuitem"  type="image" class="menu__opção" src="./img/menu/menu-globo.png" aria-labelledby="Opção do menu: Discoteca" alt="Globo de discoteca: clicar para ir para a opção discoteca">
+        <input role="menuitem"  type="image" class="menu__opção" src="./img/menu/menu-globo.png" aria-labelledby="Opção do menu: Discoteca" alt="Globo de discoteca: clicar para ir para a opção discoteca. Ao clicar uma música começará a tocar automaticamente">
         <input role="menuitem" type="image" class="menu__opção" src="./img/menu/menu-boombox.png" aria-labelledby="Opção do menu: Boombox" alt="Caixa de som: clicar para ir para a opção boombox" >
 
       </div>
@@ -142,6 +140,31 @@
 
     <input role="button" type="image" class="rádio__controle--próxima"  aria-labelledby="Botão para tocar a próxima música no rádio" src="./img/rádio/controle-próxima.png" alt="Controle do rádio: clicar ir para a próxima música" >
 
+  </div>
+
+  <!---- Discoteca ---->
+
+  <div class="discoteca">
+    
+    <!-- Voltar menu inicial -->
+
+    <div class="discoteca__voltar">
+        <button role="button" class="discoteca__voltar--botão"  aria-labelledby="Botão para voltar ao menu inicial">menu inicial</button>
+    </div>
+
+    <!-- Luzes Discoteca -->
+
+    <div class="discoteca__luzes"></div>
+
+    <!-- Globo Discoteca -->
+
+    <div class="discoteca__globo">
+      <video class="discoteca__globo__vídeo" autoplay loop muted playsinline src="./img/discoteca/globo.mp4" alt="Globo de discoteca girando" ></video>
+    </div>
+
+    <!-- Música Discoteca -->
+
+    <audio class="discoteca__música" src="./img/discoteca/heart-of-glass.mp3"></audio>
 
   </div>
 
@@ -157,6 +180,7 @@
     ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
   </script>
   <script src="https://www.google-analytics.com/analytics.js" async></script>
+
 </body>
 
 </html>
