@@ -80,59 +80,6 @@ body {
     margin-bottom: 50px;
   }
 }
-/* //// Em breve //// */
-.embreve {
-  display: none;
-}
-.embreve .embreve__título {
-  color: ivory;
-  font-size: 40px;
-  text-align: center;
-  margin-top: 200px;
-}
-.embreve .embreve__voltar {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 50px;
-  width: 25vw;
-}
-.embreve .embreve__voltar .embreve__voltar--botão {
-  color: ivory;
-  border: 3px solid ivory;
-  font-size: 30px;
-  background: none;
-  cursor: pointer;
-  border-radius: 12px;
-  padding: 10px;
-  text-align: center;
-}
-.embreve .embreve__voltar .embreve__voltar--botão:hover {
-  color: gray;
-  border: 3px solid grey;
-}
-
-@media only screen and (min-width: 768px) {
-  .embreve .embreve__voltar {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
-    width: 7vw;
-  }
-  .embreve .embreve__título {
-    color: ivory;
-    font-size: 50px;
-  }
-}
-@media only screen and (min-width: 1600px) {
-  .embreve .embreve__título {
-    margin-top: 400px;
-  }
-}
-@media only screen and (min-width: 1700px) {
-  .embreve .embreve__título {
-    margin-top: 500px;
-  }
-}
 /* //// Vitrola //// */
 .vitrola {
   display: none;
@@ -434,7 +381,7 @@ body {
 }
 .discoteca .discoteca__voltar {
   position: fixed;
-  margin-top: 473px;
+  margin-top: 630px;
   margin-left: 600px;
   z-index: 3;
 }
@@ -477,6 +424,59 @@ body {
 @media only screen and (min-width: 1600px) {
   .discoteca {
     transform: scale(1.4);
+  }
+}
+.boombox {
+  display: none;
+  position: absolute;
+  left: -480px;
+  width: 100vh;
+}
+.boombox .boombox__fundo {
+  position: fixed;
+}
+.boombox .boombox__fundo .boombox__fundo__img {
+  width: 1400px;
+}
+.boombox .boombox__voltar {
+  position: fixed;
+  margin-top: 520px;
+  margin-left: 520px;
+  z-index: 1;
+}
+.boombox .boombox__voltar .boombox__voltar--botão {
+  color: black;
+  border: none;
+  font-size: 25px;
+  background: none;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+  .boombox {
+    position: unset;
+  }
+  .boombox .boombox__voltar {
+    margin-left: 470px;
+  }
+  .boombox .boombox__voltar .boombox__voltar--botão {
+    color: black;
+    border: none;
+    font-size: 25px;
+    background: none;
+    cursor: pointer;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .boombox .boombox__fundo .boombox__fundo__img {
+    width: 2000px;
+  }
+  .boombox .boombox__voltar {
+    margin-left: 700px;
+    margin-top: 738px;
+  }
+  .boombox .boombox__voltar .boombox__voltar--botão {
+    font-size: 42px;
   }
 }
 

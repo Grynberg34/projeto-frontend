@@ -38,22 +38,11 @@ document.getElementsByClassName("menu__opção")[2].addEventListener("click", ()
 })
 
 
-// 4. Boombox (em breve)
+// 4. Boombox
 document.getElementsByClassName("menu__opção")[3].addEventListener("click", () => {
     document.getElementsByClassName("menu")[0].style.display = "none";
-    document.getElementsByClassName("embreve")[0].style.display = "block";
-})
-
-
-
-// // EM BREVE // //
-
-
-// Voltar para o Menu Inicial
-
-document.getElementsByClassName("embreve__voltar")[0].addEventListener("click", () => {
-    document.getElementsByClassName("menu")[0].style.display = "block"
-    document.getElementsByClassName("embreve")[0].style.display = "none"
+    document.getElementsByClassName("boombox")[0].style.display = "block";
+    document.getElementsByClassName("boombox__música")[0].play()
 })
 
 
@@ -423,4 +412,16 @@ document.getElementsByClassName("discoteca__voltar--botão")[0].addEventListener
     document.getElementsByClassName("discoteca")[0].style.display = "none"
     document.getElementsByClassName("discoteca__música")[0].pause();
     document.getElementsByClassName("discoteca__música")[0].currentTime = 0;
+})
+
+
+//// BOOMBOX ////
+
+// Voltar para o Menu Inicial
+
+document.getElementsByClassName("boombox__voltar--botão")[0].addEventListener("click", () => {
+    document.getElementsByClassName("menu")[0].style.display = "block"
+    document.getElementsByClassName("boombox")[0].style.display = "none"
+    document.getElementsByClassName("boombox__música")[0].pause();
+    document.getElementsByClassName("boombox__música")[0].currentTime = 0;
 })
