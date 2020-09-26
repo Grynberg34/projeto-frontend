@@ -425,3 +425,4 @@ document.getElementsByClassName("boombox__voltar--botão")[0].addEventListener("
     document.getElementsByClassName("boombox__música")[0].pause();
     document.getElementsByClassName("boombox__música")[0].currentTime = 0;
 })
+
