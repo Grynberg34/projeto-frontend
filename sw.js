@@ -27,6 +27,14 @@ var urlsToCache = [
   'img/vitrola/lp.png',
   'css/main.css',
   'js/main.js',
+  'sw.js',
+  'css/normalize.css',
+  'js/plugins.js',
+  'js/vendor/modernizr-3.11.2.min.js',
+
+
+
+
   
   
 ];
